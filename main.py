@@ -45,6 +45,19 @@ def conversion_type():
         ounce = mass * 0.03527396195
         print(f'{ounce}oz')
 
+    elif choice == 'Length':
+        print('Converts ')
+        length = input('Entre length to be converted : ')
+        length = int(length)
+
+    elif choice == 'Quantity' :
+        print('Converts ')
+        quantity = input('Enter quantity to be converted : ')
+        quantity = int(quantity)
+
+    else:
+        print('Error .Choice not recognised, enter a valid choice')
+
 
 welcome_message()
 conversion_type()
