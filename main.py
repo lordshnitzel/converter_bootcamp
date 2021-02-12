@@ -1,6 +1,6 @@
 def welcome_message():
-    user_name = input("Enter your username")
-    message = f'Hello { user_name}.Welcome to the conversion app.'
+    user_name = input("Enter your username : ")
+    message = f'Hello {user_name}.Welcome to the conversion app.'
     print(message)
 
 
@@ -9,10 +9,10 @@ def conversion_type():
     message = f'Pick a converter that you would like to use out of the following: {conversions}'
     print(message)
 
-    choice = input('Which converter do you want to use?')
+    choice = input('Which converter do you want to use? :')
     if choice == 'Grade':
         print("Converting form number grade to letter grade")
-        grade = input('Enter grade to be converted:')
+        grade = input('Enter grade to be converted : ')
         grade = int(grade)
         if grade > 100:
             print("Error ....Number too large to be evaluated")
@@ -33,24 +33,26 @@ def conversion_type():
 
     elif choice == 'Temperature':
         print('convert temperature from fahrenheit to celsius')
-        temp = input('Enter your temperature in fahrenheit')
+        temp = input('Enter your temperature in fahrenheit : ')
         temp = int(temp)
-        fahrenheit = (temp-30)/2
+        fahrenheit = (temp - 30) / 2
         print(f'{fahrenheit}F')
 
     elif choice == 'Mass':
         print('Convert mass from Grams to Ounces')
-        mass = input('Enter mass in grams')
+        mass = input('Enter mass in grams : ')
         mass = int(mass)
         ounce = mass * 0.03527396195
         print(f'{ounce}oz')
 
     elif choice == 'Length':
         print('Converts ')
-        length = input('Entre length to be converted : ')
+        length = input('Entre length in cm to be converted to inches : ')
         length = int(length)
+        inch = length/0.3937007874
+        print(f'{inch}in')
 
-    elif choice == 'Quantity' :
+    elif choice == 'Quantity':
         print('Converts ')
         quantity = input('Enter quantity to be converted : ')
         quantity = int(quantity)
@@ -61,3 +63,9 @@ def conversion_type():
 
 welcome_message()
 conversion_type()
+
+rerun = input('Do you wish to use the converter again ? [ yes / no ] : ')
+if rerun == 'yes':
+    conversion_type()
+else:
+    exit()
